@@ -31,4 +31,9 @@ export class CartComponent {
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
   }
+
+  dropFromCart(idxItem){
+    this.items.splice(idxItem, 1);
+    window.alert('Your product has been removed from the cart!');
+  }
 }
